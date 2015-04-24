@@ -1,15 +1,15 @@
 {
-    "name": "balancer/site-tanzpol",
-    "description": "Tanzpol.org site sources",
-    "license": "GPL-3.0",
+	"name": "balancer/site-tanzpol",
+	"description": "Tanzpol.org site sources",
+	"license": "GPL-3.0",
 	"homepage": "http://www.balancer.ru/",
 
-    "authors": [
-        {
-            "name": "Balancer",
-            "email": "balancer@balancer.ru"
-        }
-    ],
+	"authors": [
+		{
+			"name": "Balancer",
+			"email": "balancer@balancer.ru"
+		}
+	],
 
 	"support": {
 		"issues": "https://github.com/Balancer/site-tanzpol/issues",
@@ -17,20 +17,34 @@
 		"source": "https://github.com/Balancer/site-tanzpol"
 	},
 
+	"repositories": [
+		{ "type": "vcs", "url": "/var/www/bors/repos/b2-core" },
+		{ "type": "vcs", "url": "/var/www/bors/repos/b2-framework" },
+		{ "type": "vcs", "url": "/var/www/bors/repos/bors-airbase" },
+		{ "type": "vcs", "url": "/var/www/bors/repos/bors-core" },
+		{ "type": "vcs", "url": "/var/www/bors/repos/bors-ext" }
+	],
+
 	"prefer-stable": true,
 	"minimum-stability": "dev",
 
-    "require": {
+	"require": {
 		"php": ">=5.4",
 
 		"balancer/bors-core": "@dev",
 		"balancer/bors-ext": "@dev",
 		"balancer/b2-core": "@dev",
 
-		"components/font-awesome": "*"
-    },
+		"balancer/bors-airbase": "@dev",
 
-    "autoload": {
+		"aronduby/dump": "*",
+		"digitalnature/php-ref": "*",
+		"tracy/tracy": "*",
+
+		"components/font-awesome": "*"
+	},
+
+	"autoload": {
 		"classmap": ["classes/"]
-    }
+	}
 }
