@@ -1,0 +1,36 @@
+{
+    "name": "balancer/site-tanzpol",
+    "description": "Tanzpol.org site sources",
+    "license": "GPL-3.0",
+	"homepage": "http://www.balancer.ru/",
+
+    "authors": [
+        {
+            "name": "Balancer",
+            "email": "balancer@balancer.ru"
+        }
+    ],
+
+	"support": {
+		"issues": "https://github.com/Balancer/site-tanzpol/issues",
+		"forum": "http://www.balancer.ru/support/viewforum.php?id=60",
+		"source": "https://github.com/Balancer/site-tanzpol"
+	},
+
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+
+    "require": {
+		"php": ">=5.4",
+
+		"balancer/bors-core": "@dev",
+		"balancer/bors-ext": "@dev",
+		"balancer/b2-core": "@dev",
+
+		"components/font-awesome": "*"
+    },
+
+    "autoload": {
+		"classmap": ["classes/"]
+    }
+}
