@@ -10,8 +10,17 @@ class tanzpol_main extends tanzpol_page
 
 	static function cat_names() { return "tanzpol"; }
 
-    function body_data()
-    {
-        return json_decode(file_get_contents('http://www.wrk.ru/news/tags/политика/last.json'), true);
-    }
+	function body_data()
+	{
+		$url = 'http://www.balancer.ru/rpc/json/find/balancer_board_post?tag=политика&fields=body,title,snip&thumb=176x122(up,crop)&limit=3';
+		$world_news = json_decode(file_get_contents($url), true);
+
+		$url = 'http://www.balancer.ru/rpc/json/find/balancer_board_post?tag=политика&fields=body,title,snip&thumb=176x122(up,crop)&limit=3&id_not='
+			.join(',', array_keys($world_news));
+		$latest_news = json_decode(file_get_contents($url), true);
+
+		return array_merge(parent::body_data(), compact('latest_news', 'world_news'), array(
+		));
+//		return json_decode(file_get_contents('http://www.wrk.ru/news/tags/политика/last.json'), true);
+	}
 }

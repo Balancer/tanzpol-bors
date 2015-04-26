@@ -17,7 +17,7 @@
 		"source": "https://github.com/Balancer/site-tanzpol"
 	},
 
-	"repositories": [
+	"repositories-disabled": [
 		{ "type": "vcs", "url": "/var/www/bors/repos/b2-core" },
 		{ "type": "vcs", "url": "/var/www/bors/repos/b2-framework" },
 		{ "type": "vcs", "url": "/var/www/bors/repos/bors-airbase" },
@@ -34,6 +34,8 @@
 		"balancer/bors-core": "@dev",
 		"balancer/bors-ext": "@dev",
 		"balancer/b2-core": "@dev",
+
+		"balancer/bors-3rd-bootstrap3": "@dev",
 
 		"balancer/bors-airbase": "@dev",
 

@@ -1,66 +1,215 @@
-<div class="alert"><i class="icon-info-sign"></i> Сайт находится в процессе создания и переноса. Пока — только рыба</div>
-
-<h3>Смотри также</h3>
-<ul>
-<li><a href="http://balancer.ru/forum/">Форумы Balancer'а</a></li>
-<li><a href="http://club.balancer.ru/">Клуб Авиабазы</a></li>
-<li><a href="http://ls.balancer.ru/">Блоги Авиабазы</a></li>
-<li><a href="http://airbase.ru/">airbase.ru</a> — Авиабаза</li>
-<li><a href="http://navy.balancer.ru/">navy.balancer.ru</a> — флот и судомоделирование</li>
-</ul>
-
-{* module class="forum_blog" cat_names=$this->cat_names() *}
-{* module class="balancer_board_module_blog" forum_ids="10,78,80,101,102,173,180,181,194,195,202,206-208" *}
-{* module class="balancer_board_module_blog" cat_names=$this->cat_names() blog_body_template='bootstrap' *}
-
-<style>
-.tanz-news {
-    margin: 0 0 8px 0;
-    padding: 8px;
-
-}
-
-.clear, .tanz-news:after {
-   content: ".";
-   display: block;
-   clear: both;
-   visibility: hidden;
-   height: 0;
-}
-
-.tanz-news h2 {
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    border-radius: 4px;
-    background-color: #2489DB;
-    margin: 0 0 8px 0;
-    padding: 4px;
-}
-
-.tanz-news h2 a {
-    color: white;
-}
-
-.tanz-news h3 {
-    margin: 0 0 8px 0;
-    padding: 0;
-}
-
-.round_box {
-    margin: 0 0 8px 0;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    border-radius: 4px;
-    padding: 4px;
-}
-
-.float_left {
-    float: left;
-    margin: 0 8px 0 0;
-}
-</style>
-
-{foreach $news as $x}
-<div class="tanz-news">
-<h2><a href="{$x.url}">{$x.title}</a></h2>
-{$x.content}
-</div>
+<div class="posts">
+	<div class="left-posts">
+		<div class="world-news">
+			<div class="main-title-head">
+				<h3>from   around   the   world</h3>
+				<a href="singlepage.html">More  +</a>
+				<div class="clearfix"></div>
+			</div>
+			<div class="world-news-grids">
+{foreach $world_news as $x}
+				<div class="world-news-grid">
+					<img src="{$x.thumbnail_url}" alt="" />
+					<a href="singlepage.html" class="title">{$x.topic_title}</a>
+					<p>{$x.snip}</p>
+					<a href="singlepage.html">Подробнее</a>
+				</div>
 {/foreach}
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="latest-articles">
+			<div class="main-title-head">
+				<h3>latest    articles</h3>
+				<a href="singlepage.html">More  +</a>
+				<div class="clearfix"></div>
+			</div>
+			<div class="world-news-grids">
+{foreach $latest_news as $x}
+				<div class="world-news-grid">
+					<img src="{$x.thumbnail_url}" alt="" />
+					<a href="singlepage.html" class="title">{$x.topic_title}</a>
+					<p>{$x.snip}</p>
+					<a href="singlepage.html">Подробнее</a>
+				</div>
+{/foreach}
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="gallery">
+			<div class="main-title-head">
+				<h3>gallery</h3>
+				<a href="#">More  +</a>
+				<div class="clearfix"></div>
+			</div>
+			<div class="gallery-images">
+				<div class="course_demo1">
+				  <ul id="flexiselDemo1">	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g1.jpg" alt="" /></a>						
+					 </li>
+					 <li>
+					   <a href="single.html"><img src="/img-foo/g2.jpg" alt="" /></a>
+					  </li>	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g3.jpg" alt="" /></a>
+					 </li>	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g4.jpg" alt="" /></a>
+					 </li>	
+				 </ul>
+			 </div>
+			 <link rel="stylesheet" href="{$asset_path}/css/flexslider.css" type="text/css" media="screen" />
+				<script type="text/javascript">
+			 $(window).load(function() {
+				$("#flexiselDemo1").flexisel({
+					visibleItems: 3,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,    		
+					pauseOnHover: true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: { 
+						portrait: { 
+							changePoint:480,
+							visibleItems: 2
+						}, 
+						landscape: { 
+							changePoint:640,
+							visibleItems: 2
+						},
+						tablet: { 
+							changePoint:768,
+							visibleItems: 3
+						}
+					}
+				});
+				
+			 });
+			  </script>
+			 <script type="text/javascript" src="{$asset_path}/js/jquery.flexisel.js"></script>
+		 </div>
+		 <div class="course_demo1">
+				  <ul id="flexiselDemo">	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g4.jpg" alt="" /></a>							
+					 </li>
+					 <li>
+						<a href="single.html"><img src="/img-foo/g5.jpg" alt="" /></a>
+					  </li>	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g6.jpg" alt="" /></a>
+					 </li>	
+					 <li>
+						<a href="single.html"><img src="/img-foo/g1.jpg" alt="" /></a>
+					 </li>	
+				 </ul>
+			 </div>
+			 <link rel="stylesheet" href="{$asset_path}/css/flexslider.css" type="text/css" media="screen" />
+				<script type="text/javascript">
+			 $(window).load(function() {
+				$("#flexiselDemo").flexisel({
+					visibleItems: 3,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,    		
+					pauseOnHover: true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: { 
+						portrait: { 
+							changePoint:480,
+							visibleItems: 2
+						}, 
+						landscape: { 
+							changePoint:640,
+							visibleItems: 2
+						},
+						tablet: { 
+							changePoint:768,
+							visibleItems: 3
+						}
+					}
+				});
+				
+			 });
+			  </script>
+			 <script type="text/javascript" src="{$asset_path}/js/jquery.flexisel.js"></script>
+
+			</div>
+		<div class="tech-news">
+			<div class="main-title-head">
+				<h3>tech     news</h3>
+				<a href="singlepage.html">More  +</a>
+				<div class="clearfix"></div>
+			</div>	
+			<div class="tech-news-grids">
+				<div class="left-tech-news">
+					<div class="tech-news-grid span_66">
+						<a href="singlepage.html">Lorem ipsum dolor sit amet conse ctetur adipiscing elit  </a>
+						<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ... </p>
+						<p>by<a href="#">John Doe </a>  |  29 comments</p>
+					</div>
+					<div class="tech-news-grid">
+						<a href="singlepage.html">Lorem ipsum dolor sit amet conse ctetur adipiscing elit  </a>
+						<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ... </p>
+						<p>by<a href="#">John Doe </a>  |  29 comments</p>
+					</div>
+				</div>
+				<div class="right-tech-news">
+					<div class="tech-news-grid span_66">
+						<a href="singlepage.html">Lorem ipsum dolor sit amet conse ctetur adipiscing elit  </a>
+						<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ... </p>
+						<p>by<a href="#">John Doe </a>  |  29 comments</p>
+					</div>
+					<div class="tech-news-grid">
+						<a href="singlepage.html">Lorem ipsum dolor sit amet conse ctetur adipiscing elit  </a>
+						<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ... </p>
+						<p>by<a href="#">John Doe </a>  |  29 comments</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="right-posts">
+		<div class="desk-grid">
+			<h3>FROM   THE   desk</h3>
+			<div class="desk">
+				<a href="singlepage.html" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit </a>
+				<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
+				<p><a href="singlepage.html">Read More</a><span>3 hours ago</span></p>
+			</div>
+			<div class="desk">
+				<a href="singlepage.html" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit </a>
+				<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
+				<p><a href="singlepage.html">Read More</a><span>3 hours ago</span></p>
+			</div>
+			<div class="desk">
+				<a href="singlepage.html" class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit </a>
+				<p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor eu mattis.</p>
+				<p><a href="singlepage.html">Read More</a><span>3 hours ago</span></p>
+			</div>
+			<a class="more" href="singlepage.html">More  +</a>
+		</div>
+		<div class="editorial">
+			<h3>editorial</h3>
+			<div class="editor">
+				<a href="single.html"><img src="/img-foo/e1.jpg" alt="" /></a>
+				<a href="single.html">Lorem ipsum dolor sit amet con se cte tur adipiscing elit</a>
+			</div>
+			<div class="editor">
+				<a href="single.html"><img src="/img-foo/e2.jpg" alt="" /></a>
+				<a href="single.html">Lorem ipsum dolor sit amet con se cte tur adipiscing elit</a>
+			</div>
+			<div class="editor">
+				<a href="single.html"><img src="/img-foo/e1.jpg" alt="" /></a>
+				<a href="single.html">Lorem ipsum dolor sit amet con se cte tur adipiscing elit</a>
+			</div>
+			<div class="editor">
+				<a href="single.html"><img src="/img-foo/e3.jpg" alt="" /></a>
+				<a href="single.html">Lorem ipsum dolor sit amet con se cte tur adipiscing elit</a>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
