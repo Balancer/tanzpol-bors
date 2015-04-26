@@ -10,9 +10,9 @@
 {foreach $world_news as $x}
 				<div class="world-news-grid">
 					<img src="{$x.thumbnail_url}" alt="" />
-					<a href="singlepage.html" class="title">{$x.topic_title}</a>
+					<a href="{$x.url}" class="title">{$x.topic_title}</a>
 					<p>{$x.snip}</p>
-					<a href="singlepage.html">Подробнее</a>
+					<a href="{$x.url}">Подробнее</a>
 				</div>
 {/foreach}
 				<div class="clearfix"></div>
@@ -28,9 +28,9 @@
 {foreach $latest_news as $x}
 				<div class="world-news-grid">
 					<img src="{$x.thumbnail_url}" alt="" />
-					<a href="singlepage.html" class="title">{$x.topic_title}</a>
+					<a href="{$x.url}" class="title">{$x.topic_title}</a>
 					<p>{$x.snip}</p>
-					<a href="singlepage.html">Подробнее</a>
+					<a href="{$x.url}">Подробнее</a>
 				</div>
 {/foreach}
 				<div class="clearfix"></div>
