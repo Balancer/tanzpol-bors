@@ -473,7 +473,7 @@ img:hover{
   overflow: hidden;
 }
 .catg1_img img {
-  height:100%;
+/*  height:100%; */
   width: 100%;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -693,7 +693,7 @@ height: 112px;
 }
 .media-left>img{
   width: 100%;
-  height: 100%;
+/*  height: 100%; */
 }
 .media-heading a{
   font-family: "Oswald",sans-serif;
@@ -1489,3 +1489,27 @@ margin: 20px auto;
  /*<!-- =========================
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->*/
+
+/* By Balancer */
+h2 {
+	width: 100%;
+}
+
+.snip {
+	font-size: 80%;
+}
+
+.limit {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.limit-2 {
+	-webkit-line-clamp: 2;
+}
+
+.limit-3 {
+	-webkit-line-clamp: 3;
+}
